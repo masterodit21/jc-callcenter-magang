@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+    <head>
+        <title>jsPlumb Persistence</title>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        
+        <link rel="stylesheet" href="css/jsplumb.css">
+        <link rel="stylesheet" href="demo.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    </head>
+    <body data-demo-id="home" data-library="dom">
+        <input type="button" id="save" value="Save"/>
+        <input type="button" id="load" value="Load"/>
+        <input type="button" id="delete" value="Delete"/>
+        <textarea id='textarea'></textarea>
+        <div id="main">
+
+            <!-- demo -->
+            <div class="" id="kitchensink-demo">
+                <div class="component window" id="window1"><strong>Window 1</strong></div>
+                <div class="component window" id="window2"><strong>Window 2</strong></div>
+                <div class="component window" id="window3"><strong>Window 3</strong></div>
+                <div class="component window" id="window4"><strong>Window 4</strong></div>
+                <div class="component window" id="window5"><strong>Window 5</strong></div>
+                <div class="component window" id="window6"><strong>Window 6</strong></div>
+                <div class="component window" id="window7"><strong>Window 7</strong></div>
+            </div>
+            <!-- /demo -->
+        </div>
+        <script src="jquery-1.9.1.min.js"></script>
+        <script src="jquery-ui.min.js"></script>
+        <!-- JS -->
+        <script src="jquery.jsPlumb-1.6.4.js"></script>
+        <!--<script src="load.js"></script>-->
+        <!--  demo code -->
+        <script src="demo.js"></script>
+        <script src="jsplumb-persistence-plugin.js"></script>
+
+        <script>
+            $("#save").click(function()
+            {
+                var obj=jsPlumb.save({selector:".window"});
+                $("#textarea").val(JSON.stringify(obj));
+            });
+
+            $("#load").click(function()
+            {
+                //Clear jsPlumb memory of connections/connectors & endpoints
+                jsPlumb.reset();
+
+                //Clear DOM
+                $("#main").empty();
+                var elem = $("<div/>");
+                elem.attr('id', "kitchensink-demo");
+                $("#main").append(elem);
+
+                //Load saved graph 
+                var v = $("#textarea").val();
+                jsPlumb.load({savedObj:JSON.parse(v),containerSelector:"#kitchensink-demo"});
+            });
+
+
+            $("#delete").click(function()
+            {
+                jsPlumb.reset();
+                $("#main").empty();
+            });
+        </script>
+    </body>
+</html>

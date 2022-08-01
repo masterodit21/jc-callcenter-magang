@@ -1,0 +1,56 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch RSA",
+            "request": "launch",
+            "mainClass": "com.rkrzmail.nikita.utility.RSA",
+            "projectName": "NikitaWeb_e4204e8e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Chat",
+            "request": "launch",
+            "mainClass": "com.web.utility.Chat",
+            "projectName": "NikitaWeb_e4204e8e"
+        },
+        {
+            "type": "java",
+            "name": "Launch LdapAuth",
+            "request": "launch",
+            "mainClass": "com.web.utility.LdapAuth",
+            "projectName": "NikitaWeb_e4204e8e"
+        },
+        {
+            "type": "java",
+            "name": "Launch QRlogo",
+            "request": "launch",
+            "mainClass": "com.web.utility.QRlogo",
+            "projectName": "NikitaWeb_e4204e8e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Saving",
+            "request": "launch",
+            "mainClass": "com.web.utility.Saving",
+            "projectName": "NikitaWeb_e4204e8e"
+        },
+        {
+            "type": "java",
+            "name": "Launch Z",
+            "request": "launch",
+            "mainClass": "com.web.utility.Z",
+            "projectName": "NikitaWeb_e4204e8e"
+        }
+    ]
+}

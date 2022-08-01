@@ -1,0 +1,66 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Apr 24, 2022, 9:48:18 PM
+    Author     : mohirwanh
+*/
+
+body{
+    font-family: 'Poppins' !important;
+}
+.btn-primary {
+    background: #579098 !important;
+    border-radius: 6px !important;
+    font-family: 'Poppins' !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    line-height: 18px !important;
+    color: #FFFFFF !important;
+}
+
+label{
+    font-family: 'Poppins' !important;
+}
+
+span{
+    font-family: 'Poppins' !important;
+}
+
+div{
+    font-family: 'Poppins' !important;
+}
+
+h1{
+    font-family: 'Poppins' !important;
+}
+
+h2{
+    font-family: 'Poppins' !important;
+}
+
+table{
+    font-family: 'Poppins' !important;
+}
+
+tr{
+    font-family: 'Poppins' !important;
+}
+
+td{
+    font-family: 'Poppins' !important;
+}
+
+th{
+    font-family: 'Poppins' !important;
+}
+
+thead{
+    font-family: 'Poppins' !important;
+}
+
+tbody{
+    font-family: 'Poppins' !important;
+}

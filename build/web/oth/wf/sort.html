@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Sortable - Connect lists</title>
+  <link rel="stylesheet" href="jquery-ui.css">
+  <script src="jquery-1.10.2.js"></script>
+  <script src="jquery-ui.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  #sortable1, #sortable2 , #sortable3, #sortable4, #sortable5, #sortable6 {
+    border: 1px solid #eee;
+    width: 142px;
+    min-height: 40px;
+    list-style-type: none;
+    margin: 0 0px 5px 0px;
+    padding: 5px 0 0 0;
+    float: left;
+    margin-right: 10px;
+     
+  }
+  #sortable1 li, #sortable2 li, #sortable3 li, #sortable4 li, #sortable5 li, #sortable6 li, .sssss   {
+    margin: 0 5px 5px 5px;
+    padding: 5px;
+    font-size: 1.2em;
+    width: 120px;
+    height:40px;
+   
+  }
+  </style>
+  <script>
+  $(function() {
+    $( "#sortable1, #sortable2 ,  #sortable3  ,  #sortable4  ,  #sortable5").sortable({
+      connectWith: ".connectedSortable"
+    }).disableSelection();
+  });
+  
+  function myFunction() {
+    	var sortedIDs = $( "#sortable5" ).sortable( "toArray" );
+ 		console.log(sortedIDs);
+ 		
+ 		function1();
+ 		$( "#sortable6" ).sortable({
+      connectWith: ".connectedSortable"
+    }).disableSelection();
+  
+  }
+  
+  function function1() {
+	  var ul = document.getElementById("sortable4");
+	  var li = document.createElement("li");
+	  li.setAttribute("id", "element4");
+	  li.setAttribute("class", "ui-state-highlight");
+	  
+	  li.appendChild(document.createTextNode("Four"));
+	  ul.appendChild(li);
+	}
+  </script>
+</head>
+<body>
+	
+  <table>
+ 	<tr><td>
+ 	
+<ul id="sortable1" class="connectedSortable">
+	 
+
+
+ 
+  <li id="ssssssssssssssss" class="ui-state-default"><div style="height:40px">Item 1</div></li>
+  <li class="ui-state-default">Item 2  <button onclick="myFunction()">Click me</button> </li>
+  <li class="ui-state-default">Item 3</li>
+  <li class="ui-state-default">Item 4</li>
+  <li class="ui-state-default">Item 5</li>
+</ul>
+ 
+<ul id="sortable2" class="connectedSortable">
+  <li class="ui-state-highlight">Item 1</li>
+  <li class="ui-state-highlight">Item 2</li>
+  <li class="ui-state-highlight">Item 3</li>
+  <li class="ui-state-highlight">Item 4</li>
+  <li class="ui-state-highlight">Item 5</li>
+</ul>
+  <ul id="sortable3" class="connectedSortable">
+ 	</ul>
+  <ul id="sortable4" class="connectedSortable">
+ 	</ul>
+ 	 <ul id="sortable5" class="connectedSortable">
+ 	</ul>
+ 	
+  <ul id="sortable6" class="connectedSortable">
+	  <li class="ui-state-highlight">Item 1</li>
+	  <li class="ui-state-highlight">Item 2</li>
+	  <li class="ui-state-highlight">Item 3</li>
+	  <li class="ui-state-highlight">Item 4</li>
+	  <li class="ui-state-highlight">Item 5</li>
+	</ul>
+	 
+	
+ 	<button onclick="myFunction()">Click me</button>
+ 		
+ 	</td></tr></table>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+         xmlns="http://java.sun.com/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         metadata-complete="true">
+     <listener>
+        <listener-class>com.nikita.generator.NikitaSessionListener</listener-class>
+    </listener>
+    
+    <filter>
+        <filter-name>NikitaFilter</filter-name>
+        <filter-class>com.nikita.generator.NikitaFilter</filter-class>
+    </filter>    
+    <filter-mapping>
+        <filter-name>NikitaFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+    <servlet>
+        <servlet-name>Application</servlet-name>
+        <servlet-class>com.nikita.generator.Application</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>NikitaProxy</servlet-name>
+        <servlet-class>com.rkrzmail.nikita.org.URITemplateProxyServlet</servlet-class>
+ 
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NikitaProxy</servlet-name>
+        <url-pattern>/NR/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NikitaProxy</servlet-name>
+        <url-pattern>/nr/*</url-pattern>
+    </servlet-mapping>    
+    <servlet-mapping>
+        <servlet-name>Application</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
