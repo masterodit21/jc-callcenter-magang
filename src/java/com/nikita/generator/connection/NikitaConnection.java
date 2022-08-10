@@ -24,7 +24,7 @@ import java.sql.Statement;
 import java.sql.Types;
 import java.util.Vector;
 import oracle.jdbc.OracleTypes;
-import org.apache.hadoop.io.DataOutputBuffer;
+
 
 /**
  * created by 13k.mail@gmail.com

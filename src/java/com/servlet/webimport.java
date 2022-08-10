@@ -6,7 +6,6 @@
 
 package com.servlet;
 
-import com.mysql.jdbc.Util;
 import com.nikita.generator.Component;
 import com.nikita.generator.IAdapterListener;
 import com.nikita.generator.NikitaLogic;

@@ -9,6 +9,7 @@
         <webroots>
           <root url="file://$MODULE_DIR$/web" relative="/" />
         </webroots>
+        <sourceRoots />
       </configuration>
     </facet>
     <facet type="web" name="Web2">
@@ -30,16 +31,12 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="ext" level="project" />
-    <orderEntry type="library" name="lib" level="project" />
-    <orderEntry type="library" name="xlsx" level="project" />
-    <orderEntry type="library" name="report" level="project" />
-    <orderEntry type="library" name="libs" level="project" />
     <orderEntry type="library" name="NikitaJasper" level="project" />
     <orderEntry type="library" name="javaee-endorsed-api-6.0" level="project" />
     <orderEntry type="library" name="org-netbeans-modules-java-j2seproject-copylibstask" level="project" />
     <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
     <orderEntry type="library" name="javax.servlet.api" level="project" />
     <orderEntry type="library" name="javax.websocket.api" level="project" />
+    <orderEntry type="library" name="libx" level="project" />
   </component>
 </module>
